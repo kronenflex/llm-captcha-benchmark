@@ -1,0 +1,58 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# ---- Jupyter ----
+.ipynb_checkpoints/
+*.nbconvert.ipynb
+
+# ---- Benchmark artefacts (generated at run time) ----
+captchas/
+logs/
+results/
+memory/
+trajectories/
+episodes/
+*.gif
+execution_errors.jsonl
+*.jsonl
+
+# ---- Learned artefacts ----
+learned_policy.json
+*.sqlite3
+*.db
+*.faiss
+*.index
+
+# ---- Model weights and adapters ----
+models/
+adapters/
+checkpoints/
+*.safetensors
+*.gguf
+*.bin
+*.pt
+*.pth
+
+# ---- Browser engines ----
+ms-playwright/
+chromedriver*
+
+# ---- Secrets ----
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# ---- OS / editor ----
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp

@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+title: "LLM CAPTCHA Benchmark: interactive CAPTCHA solving and motor-control analysis for multimodal language models"
+message: "If you use this software, please cite it as below."
+type: software
+authors:
+  - family-names: Pavez
+    given-names: Diego
+repository-code: "https://github.com/kronenflex/llm-captcha-benchmark"
+abstract: >-
+  A self-contained benchmark that measures how well local multimodal language
+  models solve 28 families of interactive CAPTCHA by driving a real Chromium
+  browser through a closed perception-action loop. All fixtures are rendered
+  locally and graded server-side by replaying each puzzle's seeded PRNG, so a
+  pass never depends on the client's claim. In addition to pass rate, every
+  pointer drag is scored on six motor-control metrics derived from the Cerno
+  CAPTCHA, giving a measurement of how robotic the agent's motion appears that
+  is orthogonal to whether the puzzle was solved. Includes an invisible
+  Cloudflare-Turnstile-style family scored on behaviour rather than on an
+  answer, a per-family gradient-boosted tool-routing policy learned from
+  recorded trajectories, and an optional LoRA fine-tune.
+keywords:
+  - CAPTCHA
+  - benchmark
+  - multimodal large language model
+  - vision language model
+  - browser automation
+  - bot detection
+  - motor control
+  - agent evaluation
+references:
+  - type: article
+    title: "MCA-Bench: a multimodal benchmark for CAPTCHA security"
+    url: "https://arxiv.org/abs/2506.05982"
+  - type: article
+    title: "Open CaptchaWorld"
+    url: "https://arxiv.org/abs/2405.07496"
+  - type: article
+    title: "Set-of-Mark prompting unleashes extraordinary visual grounding in GPT-4V"
+    url: "https://arxiv.org/abs/2310.11441"
+license: MIT

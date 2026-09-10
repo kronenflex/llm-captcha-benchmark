@@ -1,0 +1,53 @@
+# LLM CAPTCHA Benchmark - pinned to the versions this project is developed against
+# (the `ai-research` conda environment, Python 3.11).
+#
+#   conda create -n ai-research python=3.11 -y
+#   conda activate ai-research
+#   pip install -r requirements.txt
+#   playwright install chromium
+#
+# numpy >= 1.24 is required: an older numpy lacks sliding_window_view and
+# silently breaks the image code the model generates inside run_image_code.
+
+# ---- model client ----
+openai==2.16.0
+
+# ---- browser ----
+playwright==1.58.0
+
+# ---- fixture + grading server ----
+Flask==3.1.3
+flask-cors==6.0.2
+
+# ---- tool-call validation ----
+jsonschema==4.23.0
+
+# ---- vision, image analysis, episode GIFs ----
+pillow==12.2.0
+opencv-python==4.13.0.92
+numpy==2.4.5
+
+# ---- experience retrieval ----
+sentence-transformers==5.4.1
+
+# ---- HTML parsing ----
+beautifulsoup4==4.15.0
+
+# ---- analysis and the routing policy ----
+pandas==2.3.3
+scikit-learn==1.7.2
+matplotlib==3.10.8
+requests==2.33.0
+tqdm==4.68.3
+
+# ---- notebook ----
+nbformat==5.10.4
+ipywidgets==8.1.8
+
+# ---- Section 22 only: the optional LoRA fine-tune (needs a GPU) ----
+# Install the CUDA build of torch from https://pytorch.org/get-started/locally/
+# torch==2.9.1
+transformers==4.57.6
+trl==0.29.1
+peft==0.17.1
+datasets==4.0.0
